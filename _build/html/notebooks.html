@@ -1,0 +1,1443 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>OpenStreetMap &#8212; My sample book</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Test 0723" href="intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="My sample book - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="My sample book - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    Test 0723
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">OpenStreetMap</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fnotebooks.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/notebooks.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>OpenStreetMap</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">全台灣釣具行分佈</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="openstreetmap">
+<h1>OpenStreetMap<a class="headerlink" href="#openstreetmap" title="Link to this heading">#</a></h1>
+<p>作業內容：嘗試用 Overpass API ，在自己的 Juptyer Notebook 中，使用如 Folium 或是其他地圖套件載入你感興趣的商家或設施。</p>
+<section id="id1">
+<h2>全台灣釣具行分佈<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">folium</span>
+<span class="kn">import</span> <span class="nn">overpass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">overpass_url</span> <span class="o">=</span> <span class="s2">&quot;http://overpass-api.de/api/interpreter&quot;</span>
+
+<span class="c1"># 您可以根據需求修改這裡的查詢條件</span>
+<span class="n">overpass_query</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">[out:json];</span>
+<span class="s2">node</span>
+<span class="s2">  [&quot;shop&quot;=&quot;fishing&quot;]</span>
+<span class="s2">  (21.8,119.5,25.4,122.0);</span>
+<span class="s2">out;</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">overpass_url</span><span class="p">,</span> 
+                        <span class="n">params</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;data&#39;</span><span class="p">:</span> <span class="n">overpass_query</span><span class="p">})</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">folium</span><span class="o">.</span><span class="n">Map</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="mf">23.7</span><span class="p">,</span> <span class="mf">121.0</span><span class="p">],</span> <span class="n">zoom_start</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+
+<span class="c1"># 遍歷 Overpass API 的回應資料，並將每個點標記在地圖上</span>
+<span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;elements&#39;</span><span class="p">]:</span>
+    <span class="n">lat</span> <span class="o">=</span> <span class="n">element</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">]</span>
+    <span class="n">lon</span> <span class="o">=</span> <span class="n">element</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">]</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="n">element</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;tags&#39;</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;name&#39;</span><span class="p">,</span> <span class="s1">&#39;Fishing Port&#39;</span><span class="p">)</span>
+    
+    <span class="n">folium</span><span class="o">.</span><span class="n">Marker</span><span class="p">(</span>
+        <span class="n">location</span><span class="o">=</span><span class="p">[</span><span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">],</span>
+        <span class="n">popup</span><span class="o">=</span><span class="n">name</span><span class="p">,</span>
+        <span class="n">icon</span><span class="o">=</span><span class="n">folium</span><span class="o">.</span><span class="n">Icon</span><span class="p">(</span><span class="n">icon</span><span class="o">=</span><span class="s1">&#39;info-sign&#39;</span><span class="p">)</span>
+    <span class="p">)</span><span class="o">.</span><span class="n">add_to</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+
+<span class="c1"># 顯示地圖</span>
+<span class="n">m</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -> Trust Notebook</span><iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+    
+        &lt;script&gt;
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        &lt;/script&gt;
+    
+    &lt;style&gt;html, body {width: 100%;height: 100%;margin: 0;padding: 0;}&lt;/style&gt;
+    &lt;style&gt;#map {position:absolute;top:0;bottom:0;right:0;left:0;}&lt;/style&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/&gt;
+    
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
+            &lt;style&gt;
+                #map_4d8c0a186b5603dacfb45dc68025310c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            &lt;/style&gt;
+        
+&lt;/head&gt;
+&lt;body&gt;
+    
+    
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_4d8c0a186b5603dacfb45dc68025310c&quot; &gt;&lt;/div&gt;
+        
+&lt;/body&gt;
+&lt;script&gt;
+    
+    
+            var map_4d8c0a186b5603dacfb45dc68025310c = L.map(
+                &quot;map_4d8c0a186b5603dacfb45dc68025310c&quot;,
+                {
+                    center: [23.7, 121.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 8,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_d2cfd3e3c13ada200ab7a497309dd0f3 = L.tileLayer(
+                &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
+                {&quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;, &quot;detectRetina&quot;: false, &quot;maxNativeZoom&quot;: 19, &quot;maxZoom&quot;: 19, &quot;minZoom&quot;: 0, &quot;noWrap&quot;: false, &quot;opacity&quot;: 1, &quot;subdomains&quot;: &quot;abc&quot;, &quot;tms&quot;: false}
+            );
+        
+    
+            tile_layer_d2cfd3e3c13ada200ab7a497309dd0f3.addTo(map_4d8c0a186b5603dacfb45dc68025310c);
+        
+    
+            var marker_5bba01913a2a84489eea452d68116384 = L.marker(
+                [24.2616745, 120.8136783],
+                {}
+            ).addTo(map_4d8c0a186b5603dacfb45dc68025310c);
+        
+    
+            var icon_2b78ae373b4b68d22e510c9995f07fd5 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;blue&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_5bba01913a2a84489eea452d68116384.setIcon(icon_2b78ae373b4b68d22e510c9995f07fd5);
+        
+    
+        var popup_78e8e9dccf0d759d02fa77ad3886e05c = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_f878834b22da3b49a8c7531f894ccbb9 = $(`&lt;div id=&quot;html_f878834b22da3b49a8c7531f894ccbb9&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;大統釣具店&lt;/div&gt;`)[0];
+                popup_78e8e9dccf0d759d02fa77ad3886e05c.setContent(html_f878834b22da3b49a8c7531f894ccbb9);
+            
+        
+
+        marker_5bba01913a2a84489eea452d68116384.bindPopup(popup_78e8e9dccf0d759d02fa77ad3886e05c)
+        ;
+
+        
+    
+    
+            var marker_52e4989eff2cd2483fe13962d327667a = L.marker(
+                [22.6271435, 120.344182],
+                {}
+            ).addTo(map_4d8c0a186b5603dacfb45dc68025310c);
+        
+    
+            var icon_7b19cccf93f4dc2c7d526d3394058c05 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;blue&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_52e4989eff2cd2483fe13962d327667a.setIcon(icon_7b19cccf93f4dc2c7d526d3394058c05);
+        
+    
+        var popup_b7ef8efaa4addd80ab01976ee48b4e55 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_600e0b8a37480693103497776a153d9f = $(`&lt;div id=&quot;html_600e0b8a37480693103497776a153d9f&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;魚拓釣具&lt;/div&gt;`)[0];
+                popup_b7ef8efaa4addd80ab01976ee48b4e55.setContent(html_600e0b8a37480693103497776a153d9f);
+            
+        
+
+        marker_52e4989eff2cd2483fe13962d327667a.bindPopup(popup_b7ef8efaa4addd80ab01976ee48b4e55)
+        ;
+
+        
+    
+    
+            var marker_9265109512aaefb6c28f6ad8acb5e6b9 = L.marker(
+                [25.0195827, 121.4662673],
+                {}
+            ).addTo(map_4d8c0a186b5603dacfb45dc68025310c);
+        
+    
+            var icon_e230c9abbd92ed29a48f2d0514cae62c = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;blue&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_9265109512aaefb6c28f6ad8acb5e6b9.setIcon(icon_e230c9abbd92ed29a48f2d0514cae62c);
+        
+    
+        var popup_bc2485ec66e37490d0adecb04165754f = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_98badf3f35619d213c4bca084309347a = $(`&lt;div id=&quot;html_98badf3f35619d213c4bca084309347a&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;永濱釣具行&lt;/div&gt;`)[0];
+                popup_bc2485ec66e37490d0adecb04165754f.setContent(html_98badf3f35619d213c4bca084309347a);
+            
+        
+
+        marker_9265109512aaefb6c28f6ad8acb5e6b9.bindPopup(popup_bc2485ec66e37490d0adecb04165754f)
+        ;
+
+        
+    
+    
+            var marker_99fc00b449d42796193372ece3c41772 = L.marker(
+                [22.8079078, 120.2429556],
+                {}
+            ).addTo(map_4d8c0a186b5603dacfb45dc68025310c);
+        
+    
+            var icon_47f8090f12380e905e6ef296211598c4 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;blue&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_99fc00b449d42796193372ece3c41772.setIcon(icon_47f8090f12380e905e6ef296211598c4);
+        
+    
+        var popup_28bea7cf5ed513b40f71d41595312f91 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_6353114b533133b072fb4a805fff621b = $(`&lt;div id=&quot;html_6353114b533133b072fb4a805fff621b&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;漁人瀧釣具行&lt;/div&gt;`)[0];
+                popup_28bea7cf5ed513b40f71d41595312f91.setContent(html_6353114b533133b072fb4a805fff621b);
+            
+        
+
+        marker_99fc00b449d42796193372ece3c41772.bindPopup(popup_28bea7cf5ed513b40f71d41595312f91)
+        ;
+
+        
+    
+    
+            var marker_bbb3343c82508c0235b30f730c8a0292 = L.marker(
+                [24.9872497, 121.4210528],
+                {}
+            ).addTo(map_4d8c0a186b5603dacfb45dc68025310c);
+        
+    
+            var icon_bbf83795f941cd920ce0b75a7ec7c27b = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;blue&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_bbb3343c82508c0235b30f730c8a0292.setIcon(icon_bbf83795f941cd920ce0b75a7ec7c27b);
+        
+    
+        var popup_58032734af3e0947fa13e7bf6cfd9422 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_0cdad4582718cbcc8199c27120b1c87c = $(`&lt;div id=&quot;html_0cdad4582718cbcc8199c27120b1c87c&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;老夫子釣具&lt;/div&gt;`)[0];
+                popup_58032734af3e0947fa13e7bf6cfd9422.setContent(html_0cdad4582718cbcc8199c27120b1c87c);
+            
+        
+
+        marker_bbb3343c82508c0235b30f730c8a0292.bindPopup(popup_58032734af3e0947fa13e7bf6cfd9422)
+        ;
+
+        
+    
+    
+            var marker_7835677dcb3568b927d92ab321f22d31 = L.marker(
+                [25.027275, 121.5436863],
+                {}
+            ).addTo(map_4d8c0a186b5603dacfb45dc68025310c);
+        
+    
+            var icon_da8a58871780435ff52b6d093d669c1d = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;blue&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_7835677dcb3568b927d92ab321f22d31.setIcon(icon_da8a58871780435ff52b6d093d669c1d);
+        
+    
+        var popup_b88eb05bc9a1cf0da1d9d4d45dc1d94b = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_b68b5dca46fd0682a497a2f6eaef8daf = $(`&lt;div id=&quot;html_b68b5dca46fd0682a497a2f6eaef8daf&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;黑潮釣具&lt;/div&gt;`)[0];
+                popup_b88eb05bc9a1cf0da1d9d4d45dc1d94b.setContent(html_b68b5dca46fd0682a497a2f6eaef8daf);
+            
+        
+
+        marker_7835677dcb3568b927d92ab321f22d31.bindPopup(popup_b88eb05bc9a1cf0da1d9d4d45dc1d94b)
+        ;
+
+        
+    
+    
+            var marker_c6b752a8d57f526c58e8f404e8068cfd = L.marker(
+                [25.031419, 121.5048277],
+                {}
+            ).addTo(map_4d8c0a186b5603dacfb45dc68025310c);
+        
+    
+            var icon_c2b651e7d4a84880cc87ed9da8549388 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;blue&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_c6b752a8d57f526c58e8f404e8068cfd.setIcon(icon_c2b651e7d4a84880cc87ed9da8549388);
+        
+    
+        var popup_48ab96ee32c37d1be712c5cee04de6a5 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_930a038e3a3e45955ed4cd7b0f49458d = $(`&lt;div id=&quot;html_930a038e3a3e45955ed4cd7b0f49458d&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;橘子國際釣具&lt;/div&gt;`)[0];
+                popup_48ab96ee32c37d1be712c5cee04de6a5.setContent(html_930a038e3a3e45955ed4cd7b0f49458d);
+            
+        
+
+        marker_c6b752a8d57f526c58e8f404e8068cfd.bindPopup(popup_48ab96ee32c37d1be712c5cee04de6a5)
+        ;
+
+        
+    
+    
+            var marker_a45900fa3535f092dcc3105cf5ae4f02 = L.marker(
+                [23.9945308, 121.6284094],
+                {}
+            ).addTo(map_4d8c0a186b5603dacfb45dc68025310c);
+        
+    
+            var icon_43aa66d2a2ad015b66662ee4c76923b2 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;blue&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_a45900fa3535f092dcc3105cf5ae4f02.setIcon(icon_43aa66d2a2ad015b66662ee4c76923b2);
+        
+    
+        var popup_e9c5f1983084a168e12fb5e41688c56a = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_b3af2c7bf579391f29462ebf34d86b31 = $(`&lt;div id=&quot;html_b3af2c7bf579391f29462ebf34d86b31&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;七月霜釣具行&lt;/div&gt;`)[0];
+                popup_e9c5f1983084a168e12fb5e41688c56a.setContent(html_b3af2c7bf579391f29462ebf34d86b31);
+            
+        
+
+        marker_a45900fa3535f092dcc3105cf5ae4f02.bindPopup(popup_e9c5f1983084a168e12fb5e41688c56a)
+        ;
+
+        
+    
+    
+            var marker_1e543489c644c1c80fc87c294748e46d = L.marker(
+                [22.9619078, 120.1840393],
+                {}
+            ).addTo(map_4d8c0a186b5603dacfb45dc68025310c);
+        
+    
+            var icon_41eddb2e7e39fd386484420eca808e23 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;blue&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_1e543489c644c1c80fc87c294748e46d.setIcon(icon_41eddb2e7e39fd386484420eca808e23);
+        
+    
+        var popup_4b89c8e9c0044eb094c013a41435cdef = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_730740351d0374bf9d514874353d9701 = $(`&lt;div id=&quot;html_730740351d0374bf9d514874353d9701&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;中華釣具&lt;/div&gt;`)[0];
+                popup_4b89c8e9c0044eb094c013a41435cdef.setContent(html_730740351d0374bf9d514874353d9701);
+            
+        
+
+        marker_1e543489c644c1c80fc87c294748e46d.bindPopup(popup_4b89c8e9c0044eb094c013a41435cdef)
+        ;
+
+        
+    
+    
+            var marker_a92876bef4d0cd44055720a9dc8f1f81 = L.marker(
+                [25.1341947, 121.8206218],
+                {}
+            ).addTo(map_4d8c0a186b5603dacfb45dc68025310c);
+        
+    
+            var icon_1ffff3a0d9e50eec8bb71e68d485095c = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;blue&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_a92876bef4d0cd44055720a9dc8f1f81.setIcon(icon_1ffff3a0d9e50eec8bb71e68d485095c);
+        
+    
+        var popup_302a5249a2d988b961bfabe47a303a94 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_9fbf22b00638a836109de2eadbe9c5bf = $(`&lt;div id=&quot;html_9fbf22b00638a836109de2eadbe9c5bf&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;海釣釣具&lt;/div&gt;`)[0];
+                popup_302a5249a2d988b961bfabe47a303a94.setContent(html_9fbf22b00638a836109de2eadbe9c5bf);
+            
+        
+
+        marker_a92876bef4d0cd44055720a9dc8f1f81.bindPopup(popup_302a5249a2d988b961bfabe47a303a94)
+        ;
+
+        
+    
+    
+            var marker_3f158bbd60f4aae7694d70d84f0ca517 = L.marker(
+                [25.1395886, 121.7964605],
+                {}
+            ).addTo(map_4d8c0a186b5603dacfb45dc68025310c);
+        
+    
+            var icon_264785f1d7a9eae13404c1e1d2ec848c = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;blue&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_3f158bbd60f4aae7694d70d84f0ca517.setIcon(icon_264785f1d7a9eae13404c1e1d2ec848c);
+        
+    
+        var popup_301552ff9d63236d4013230340765ddb = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_c573f33df3bc8fd4924fb5a69cab992c = $(`&lt;div id=&quot;html_c573f33df3bc8fd4924fb5a69cab992c&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;三和興釣具&lt;/div&gt;`)[0];
+                popup_301552ff9d63236d4013230340765ddb.setContent(html_c573f33df3bc8fd4924fb5a69cab992c);
+            
+        
+
+        marker_3f158bbd60f4aae7694d70d84f0ca517.bindPopup(popup_301552ff9d63236d4013230340765ddb)
+        ;
+
+        
+    
+    
+            var marker_33fc65376b423191d1e4780e148a3099 = L.marker(
+                [25.1398969, 121.7969085],
+                {}
+            ).addTo(map_4d8c0a186b5603dacfb45dc68025310c);
+        
+    
+            var icon_3d4ffab26bf05642a8998dc2c99df785 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;blue&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_33fc65376b423191d1e4780e148a3099.setIcon(icon_3d4ffab26bf05642a8998dc2c99df785);
+        
+    
+        var popup_197ba3f57319f7f55de62f6b295007be = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_68cd0656e92830d304f28554605849b6 = $(`&lt;div id=&quot;html_68cd0656e92830d304f28554605849b6&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;釣具店&lt;/div&gt;`)[0];
+                popup_197ba3f57319f7f55de62f6b295007be.setContent(html_68cd0656e92830d304f28554605849b6);
+            
+        
+
+        marker_33fc65376b423191d1e4780e148a3099.bindPopup(popup_197ba3f57319f7f55de62f6b295007be)
+        ;
+
+        
+    
+    
+            var marker_3d2bf0b92cf49e14acd03235e4ec8ee9 = L.marker(
+                [24.1860064, 120.6403512],
+                {}
+            ).addTo(map_4d8c0a186b5603dacfb45dc68025310c);
+        
+    
+            var icon_26cae2effac62885202b2c8f6e0f84f1 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;blue&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_3d2bf0b92cf49e14acd03235e4ec8ee9.setIcon(icon_26cae2effac62885202b2c8f6e0f84f1);
+        
+    
+        var popup_4443563db818295552ff0aa69c064707 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_ec3150671c2fc68a2e000b2bf18ad369 = $(`&lt;div id=&quot;html_ec3150671c2fc68a2e000b2bf18ad369&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;名洋釣具&lt;/div&gt;`)[0];
+                popup_4443563db818295552ff0aa69c064707.setContent(html_ec3150671c2fc68a2e000b2bf18ad369);
+            
+        
+
+        marker_3d2bf0b92cf49e14acd03235e4ec8ee9.bindPopup(popup_4443563db818295552ff0aa69c064707)
+        ;
+
+        
+    
+    
+            var marker_dc09e46cb711ec22182146426d3afc4c = L.marker(
+                [24.955121, 121.5390806],
+                {}
+            ).addTo(map_4d8c0a186b5603dacfb45dc68025310c);
+        
+    
+            var icon_fbcef210c5adab61ba5f09cb3820c763 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;blue&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_dc09e46cb711ec22182146426d3afc4c.setIcon(icon_fbcef210c5adab61ba5f09cb3820c763);
+        
+    
+        var popup_42627b2f8554e8accc97f260d4b1182d = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_6a40fbed21dbffbb95ba7d058d49e6ff = $(`&lt;div id=&quot;html_6a40fbed21dbffbb95ba7d058d49e6ff&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;惠惠釣具二店&lt;/div&gt;`)[0];
+                popup_42627b2f8554e8accc97f260d4b1182d.setContent(html_6a40fbed21dbffbb95ba7d058d49e6ff);
+            
+        
+
+        marker_dc09e46cb711ec22182146426d3afc4c.bindPopup(popup_42627b2f8554e8accc97f260d4b1182d)
+        ;
+
+        
+    
+    
+            var marker_759e25831d6a74358bc607c71c625a3a = L.marker(
+                [24.2462925, 120.5470637],
+                {}
+            ).addTo(map_4d8c0a186b5603dacfb45dc68025310c);
+        
+    
+            var icon_38999de83949422e2430b2b0976a27d6 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;blue&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_759e25831d6a74358bc607c71c625a3a.setIcon(icon_38999de83949422e2430b2b0976a27d6);
+        
+    
+        var popup_6c1b6ac3593205c3f15224940960cc26 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_ed284ee2f621735f1b3f30f06636b6b5 = $(`&lt;div id=&quot;html_ed284ee2f621735f1b3f30f06636b6b5&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;丁丁釣具&lt;/div&gt;`)[0];
+                popup_6c1b6ac3593205c3f15224940960cc26.setContent(html_ed284ee2f621735f1b3f30f06636b6b5);
+            
+        
+
+        marker_759e25831d6a74358bc607c71c625a3a.bindPopup(popup_6c1b6ac3593205c3f15224940960cc26)
+        ;
+
+        
+    
+    
+            var marker_9e04244ed86e19c5d4d4b3e853bab019 = L.marker(
+                [24.9613092, 121.5385281],
+                {}
+            ).addTo(map_4d8c0a186b5603dacfb45dc68025310c);
+        
+    
+            var icon_95a1279622b1b585ed9b577f4674dde1 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;blue&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_9e04244ed86e19c5d4d4b3e853bab019.setIcon(icon_95a1279622b1b585ed9b577f4674dde1);
+        
+    
+        var popup_a818540f2e1e18a89dbed140cf4e3672 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_faa6fa164ad6c76826af123ec4fbedc0 = $(`&lt;div id=&quot;html_faa6fa164ad6c76826af123ec4fbedc0&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;漁拓釣具&lt;/div&gt;`)[0];
+                popup_a818540f2e1e18a89dbed140cf4e3672.setContent(html_faa6fa164ad6c76826af123ec4fbedc0);
+            
+        
+
+        marker_9e04244ed86e19c5d4d4b3e853bab019.bindPopup(popup_a818540f2e1e18a89dbed140cf4e3672)
+        ;
+
+        
+    
+    
+            var marker_c940c4a2ff127d0e17de2c008f398f99 = L.marker(
+                [22.6259144, 120.2777155],
+                {}
+            ).addTo(map_4d8c0a186b5603dacfb45dc68025310c);
+        
+    
+            var icon_50066d48a16fb6e177671f3ace0974e9 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;blue&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_c940c4a2ff127d0e17de2c008f398f99.setIcon(icon_50066d48a16fb6e177671f3ace0974e9);
+        
+    
+        var popup_f2e46d43c6ea7d544bad3971809c7d26 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_90fde8a2e1941a332225dac5a1d00edf = $(`&lt;div id=&quot;html_90fde8a2e1941a332225dac5a1d00edf&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;海盛釣具&lt;/div&gt;`)[0];
+                popup_f2e46d43c6ea7d544bad3971809c7d26.setContent(html_90fde8a2e1941a332225dac5a1d00edf);
+            
+        
+
+        marker_c940c4a2ff127d0e17de2c008f398f99.bindPopup(popup_f2e46d43c6ea7d544bad3971809c7d26)
+        ;
+
+        
+    
+    
+            var marker_390cc3ab960a5bd6d07573ab38ecfdcf = L.marker(
+                [22.6201682, 120.2701798],
+                {}
+            ).addTo(map_4d8c0a186b5603dacfb45dc68025310c);
+        
+    
+            var icon_6d82750f40edf0e78162ab09ee2aa1cf = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;blue&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_390cc3ab960a5bd6d07573ab38ecfdcf.setIcon(icon_6d82750f40edf0e78162ab09ee2aa1cf);
+        
+    
+        var popup_39a83ad832b3c58f5310582011a70fd5 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_8569e7815ca5b44d40f8e271307e2551 = $(`&lt;div id=&quot;html_8569e7815ca5b44d40f8e271307e2551&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;老場釣具行&lt;/div&gt;`)[0];
+                popup_39a83ad832b3c58f5310582011a70fd5.setContent(html_8569e7815ca5b44d40f8e271307e2551);
+            
+        
+
+        marker_390cc3ab960a5bd6d07573ab38ecfdcf.bindPopup(popup_39a83ad832b3c58f5310582011a70fd5)
+        ;
+
+        
+    
+    
+            var marker_d6594f38d092653383f340493d58cee1 = L.marker(
+                [25.2213867, 121.6322055],
+                {}
+            ).addTo(map_4d8c0a186b5603dacfb45dc68025310c);
+        
+    
+            var icon_f0840e8b0c6e5cf555f033623933d00c = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;blue&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_d6594f38d092653383f340493d58cee1.setIcon(icon_f0840e8b0c6e5cf555f033623933d00c);
+        
+    
+        var popup_d24eaeb3b5372ce54609fd12670d70c3 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_cc763c3e1ef44d12afe79ed5c985127d = $(`&lt;div id=&quot;html_cc763c3e1ef44d12afe79ed5c985127d&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;順風漁具行&lt;/div&gt;`)[0];
+                popup_d24eaeb3b5372ce54609fd12670d70c3.setContent(html_cc763c3e1ef44d12afe79ed5c985127d);
+            
+        
+
+        marker_d6594f38d092653383f340493d58cee1.bindPopup(popup_d24eaeb3b5372ce54609fd12670d70c3)
+        ;
+
+        
+    
+    
+            var marker_b48841fe3f229e0e8486c3722ef560b9 = L.marker(
+                [23.7562339, 120.6887503],
+                {}
+            ).addTo(map_4d8c0a186b5603dacfb45dc68025310c);
+        
+    
+            var icon_f7e50d8ae7273c3fca1685bd2f570f95 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;blue&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_b48841fe3f229e0e8486c3722ef560b9.setIcon(icon_f7e50d8ae7273c3fca1685bd2f570f95);
+        
+    
+        var popup_832c3acad5dd513f1da600d784686b1f = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_142e84f6c16ff0749e35c30d09d1e793 = $(`&lt;div id=&quot;html_142e84f6c16ff0749e35c30d09d1e793&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;一朗釣具&lt;/div&gt;`)[0];
+                popup_832c3acad5dd513f1da600d784686b1f.setContent(html_142e84f6c16ff0749e35c30d09d1e793);
+            
+        
+
+        marker_b48841fe3f229e0e8486c3722ef560b9.bindPopup(popup_832c3acad5dd513f1da600d784686b1f)
+        ;
+
+        
+    
+    
+            var marker_6237c38f47df5771b3b66f56aa354778 = L.marker(
+                [25.2927371, 121.5677603],
+                {}
+            ).addTo(map_4d8c0a186b5603dacfb45dc68025310c);
+        
+    
+            var icon_a119e11683ebfa62c6a383dad8f28c23 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;blue&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_6237c38f47df5771b3b66f56aa354778.setIcon(icon_a119e11683ebfa62c6a383dad8f28c23);
+        
+    
+        var popup_d4c68d1d478f26e3b18d73d7babbab7d = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_5764d98860b32046d9511f2f9756b691 = $(`&lt;div id=&quot;html_5764d98860b32046d9511f2f9756b691&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;合光釣具&lt;/div&gt;`)[0];
+                popup_d4c68d1d478f26e3b18d73d7babbab7d.setContent(html_5764d98860b32046d9511f2f9756b691);
+            
+        
+
+        marker_6237c38f47df5771b3b66f56aa354778.bindPopup(popup_d4c68d1d478f26e3b18d73d7babbab7d)
+        ;
+
+        
+    
+    
+            var marker_23552e07397c958175c1d2b4a805c911 = L.marker(
+                [25.1287826, 121.8174486],
+                {}
+            ).addTo(map_4d8c0a186b5603dacfb45dc68025310c);
+        
+    
+            var icon_0b73c9b9ffab960dbec7852272762363 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;blue&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_23552e07397c958175c1d2b4a805c911.setIcon(icon_0b73c9b9ffab960dbec7852272762363);
+        
+    
+        var popup_f0ebd7a426218c78c183bde45c7a4453 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_903709228b9e2dabae0acc44c681fee1 = $(`&lt;div id=&quot;html_903709228b9e2dabae0acc44c681fee1&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Fishing Port&lt;/div&gt;`)[0];
+                popup_f0ebd7a426218c78c183bde45c7a4453.setContent(html_903709228b9e2dabae0acc44c681fee1);
+            
+        
+
+        marker_23552e07397c958175c1d2b4a805c911.bindPopup(popup_f0ebd7a426218c78c183bde45c7a4453)
+        ;
+
+        
+    
+    
+            var marker_33e4657e4a02f0047f0aac59023df909 = L.marker(
+                [25.1290671, 121.8174888],
+                {}
+            ).addTo(map_4d8c0a186b5603dacfb45dc68025310c);
+        
+    
+            var icon_bf8675fb8e379e7dc861ee03ccd8f89d = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;blue&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_33e4657e4a02f0047f0aac59023df909.setIcon(icon_bf8675fb8e379e7dc861ee03ccd8f89d);
+        
+    
+        var popup_e28dfb8df3ca4c37982990aeeb36859f = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_f396dc0f5d59ab15f2d1e62b54eb34ea = $(`&lt;div id=&quot;html_f396dc0f5d59ab15f2d1e62b54eb34ea&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Fishing Port&lt;/div&gt;`)[0];
+                popup_e28dfb8df3ca4c37982990aeeb36859f.setContent(html_f396dc0f5d59ab15f2d1e62b54eb34ea);
+            
+        
+
+        marker_33e4657e4a02f0047f0aac59023df909.bindPopup(popup_e28dfb8df3ca4c37982990aeeb36859f)
+        ;
+
+        
+    
+    
+            var marker_2f93e9a368b3a85e42e37e36ca7d081a = L.marker(
+                [25.1290127, 121.8172766],
+                {}
+            ).addTo(map_4d8c0a186b5603dacfb45dc68025310c);
+        
+    
+            var icon_5669e427af172b4bfb1738fd92a84a9c = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;blue&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_2f93e9a368b3a85e42e37e36ca7d081a.setIcon(icon_5669e427af172b4bfb1738fd92a84a9c);
+        
+    
+        var popup_6435daa92e14f5990f428ec90660a7b8 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_3a803435ef38a9fd64a6261155c96da1 = $(`&lt;div id=&quot;html_3a803435ef38a9fd64a6261155c96da1&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;Fishing Port&lt;/div&gt;`)[0];
+                popup_6435daa92e14f5990f428ec90660a7b8.setContent(html_3a803435ef38a9fd64a6261155c96da1);
+            
+        
+
+        marker_2f93e9a368b3a85e42e37e36ca7d081a.bindPopup(popup_6435daa92e14f5990f428ec90660a7b8)
+        ;
+
+        
+    
+    
+            var marker_63faf76de27a1cb442871ba02e48c742 = L.marker(
+                [25.2287625, 121.4516581],
+                {}
+            ).addTo(map_4d8c0a186b5603dacfb45dc68025310c);
+        
+    
+            var icon_e3de36cd59aec18b15792392075166a7 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;blue&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_63faf76de27a1cb442871ba02e48c742.setIcon(icon_e3de36cd59aec18b15792392075166a7);
+        
+    
+        var popup_dd57ad352309e0dfcd19f732bf39b99a = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_49de5fa7d2b918f87ed2211026738409 = $(`&lt;div id=&quot;html_49de5fa7d2b918f87ed2211026738409&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;高竿釣具&lt;/div&gt;`)[0];
+                popup_dd57ad352309e0dfcd19f732bf39b99a.setContent(html_49de5fa7d2b918f87ed2211026738409);
+            
+        
+
+        marker_63faf76de27a1cb442871ba02e48c742.bindPopup(popup_dd57ad352309e0dfcd19f732bf39b99a)
+        ;
+
+        
+    
+    
+            var marker_23c87cc0e0837f952cb7d8215b52805e = L.marker(
+                [24.1587997, 120.689173],
+                {}
+            ).addTo(map_4d8c0a186b5603dacfb45dc68025310c);
+        
+    
+            var icon_f7e47c9b8c8c23488ebb8cebca54f037 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;blue&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_23c87cc0e0837f952cb7d8215b52805e.setIcon(icon_f7e47c9b8c8c23488ebb8cebca54f037);
+        
+    
+        var popup_3b470ead5b62fb6972039fd193a46688 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_1161fc3a9dc9992f6ebdb28fbbd937bb = $(`&lt;div id=&quot;html_1161fc3a9dc9992f6ebdb28fbbd937bb&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;漁拓釣具&lt;/div&gt;`)[0];
+                popup_3b470ead5b62fb6972039fd193a46688.setContent(html_1161fc3a9dc9992f6ebdb28fbbd937bb);
+            
+        
+
+        marker_23c87cc0e0837f952cb7d8215b52805e.bindPopup(popup_3b470ead5b62fb6972039fd193a46688)
+        ;
+
+        
+    
+    
+            var marker_3feb896a7686dfbb6421d2f4e53a576b = L.marker(
+                [25.0797626, 121.481448],
+                {}
+            ).addTo(map_4d8c0a186b5603dacfb45dc68025310c);
+        
+    
+            var icon_22a97d18dcb04504f9f0c78837ca2a6e = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;blue&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_3feb896a7686dfbb6421d2f4e53a576b.setIcon(icon_22a97d18dcb04504f9f0c78837ca2a6e);
+        
+    
+        var popup_744acdd1f8b99d7452d8662612a26a26 = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_334775898e64897489b9c69ec44a76c0 = $(`&lt;div id=&quot;html_334775898e64897489b9c69ec44a76c0&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;東區釣具&lt;/div&gt;`)[0];
+                popup_744acdd1f8b99d7452d8662612a26a26.setContent(html_334775898e64897489b9c69ec44a76c0);
+            
+        
+
+        marker_3feb896a7686dfbb6421d2f4e53a576b.bindPopup(popup_744acdd1f8b99d7452d8662612a26a26)
+        ;
+
+        
+    
+    
+            var marker_e71053ca723d7217d51df8a9a2e04859 = L.marker(
+                [25.0816451, 121.5884969],
+                {}
+            ).addTo(map_4d8c0a186b5603dacfb45dc68025310c);
+        
+    
+            var icon_29a40697f746ef5861386bafeb0b5787 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;blue&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_e71053ca723d7217d51df8a9a2e04859.setIcon(icon_29a40697f746ef5861386bafeb0b5787);
+        
+    
+        var popup_a450c0d6a2d70bf91530239453cc8d7b = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_14428e778492a53c992f9765de5895e6 = $(`&lt;div id=&quot;html_14428e778492a53c992f9765de5895e6&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;人友釣具行&lt;/div&gt;`)[0];
+                popup_a450c0d6a2d70bf91530239453cc8d7b.setContent(html_14428e778492a53c992f9765de5895e6);
+            
+        
+
+        marker_e71053ca723d7217d51df8a9a2e04859.bindPopup(popup_a450c0d6a2d70bf91530239453cc8d7b)
+        ;
+
+        
+    
+    
+            var marker_d823c9a50cd20d46282383c11379c0f5 = L.marker(
+                [24.9631136, 121.3068263],
+                {}
+            ).addTo(map_4d8c0a186b5603dacfb45dc68025310c);
+        
+    
+            var icon_15dd101a8576885e3d3f9b79ed8d24e0 = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;blue&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_d823c9a50cd20d46282383c11379c0f5.setIcon(icon_15dd101a8576885e3d3f9b79ed8d24e0);
+        
+    
+        var popup_a0a6377a1f5e731709ef577cec6dd48d = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_36d24a277c67d9caddb44e160d185b53 = $(`&lt;div id=&quot;html_36d24a277c67d9caddb44e160d185b53&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;名洋釣具&lt;/div&gt;`)[0];
+                popup_a0a6377a1f5e731709ef577cec6dd48d.setContent(html_36d24a277c67d9caddb44e160d185b53);
+            
+        
+
+        marker_d823c9a50cd20d46282383c11379c0f5.bindPopup(popup_a0a6377a1f5e731709ef577cec6dd48d)
+        ;
+
+        
+    
+    
+            var marker_d3ebc050d92f66ef7fd4728fc67bbbbf = L.marker(
+                [24.9205573, 121.8838759],
+                {}
+            ).addTo(map_4d8c0a186b5603dacfb45dc68025310c);
+        
+    
+            var icon_8bfbad45f99b028af3fb26f9fcf5ef2d = L.AwesomeMarkers.icon(
+                {&quot;extraClasses&quot;: &quot;fa-rotate-0&quot;, &quot;icon&quot;: &quot;info-sign&quot;, &quot;iconColor&quot;: &quot;white&quot;, &quot;markerColor&quot;: &quot;blue&quot;, &quot;prefix&quot;: &quot;glyphicon&quot;}
+            );
+            marker_d3ebc050d92f66ef7fd4728fc67bbbbf.setIcon(icon_8bfbad45f99b028af3fb26f9fcf5ef2d);
+        
+    
+        var popup_775a852d64b377599089d7db0ff3091b = L.popup({&quot;maxWidth&quot;: &quot;100%&quot;});
+
+        
+            
+                var html_eac193055cdba3754f15b4b782c2b6e1 = $(`&lt;div id=&quot;html_eac193055cdba3754f15b4b782c2b6e1&quot; style=&quot;width: 100.0%; height: 100.0%;&quot;&gt;合興釣具&lt;/div&gt;`)[0];
+                popup_775a852d64b377599089d7db0ff3091b.setContent(html_eac193055cdba3754f15b4b782c2b6e1);
+            
+        
+
+        marker_d3ebc050d92f66ef7fd4728fc67bbbbf.bindPopup(popup_775a852d64b377599089d7db0ff3091b)
+        ;
+
+        
+    
+&lt;/script&gt;
+&lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div></div></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Test 0723</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">全台灣釣具行分佈</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By The Jupyter Book Community
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
